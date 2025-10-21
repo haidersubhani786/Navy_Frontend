@@ -23,7 +23,7 @@ const FuelCombustion = ({ view = "live", startDate, endDate, isRange }) => {
   ];
 
   const fuelFlowVariabilityConfig = [
-    { name: 'Fuel Flow Rate Change', valueField: 'fuelFlowChange', color: '#22C55E', type: 'line' },
+    { name: 'Fuel Flow Rate Change', valueField: 'FuelFlowRateChange', color: '#22C55E', type: 'line' },
   ];
 
   const injectionSystemHealthConfig = [
@@ -115,7 +115,7 @@ const baseApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/fuel-combustio
           chartId="fuel-flow-variability"
           seriesConfig={fuelFlowVariabilityConfig}
           apiUrl={`${baseApiUrl}/fuel-flow-variability`}
-          yAxisTitleLeft="Fuel Flow Change"
+          yAxisTitleLeft="Fuel Flow Rate Change"
           extraPayload={getCommonPayload()}
           infoContent="Monitors variations in fuel flow to detect supply inconsistencies."
         />

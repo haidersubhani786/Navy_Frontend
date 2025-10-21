@@ -10,7 +10,7 @@ const ElectricalHealth = ({ view = "live", startDate, endDate, isRange }) => {
     { name: 'Phase A Balance', valueField: 'Genset_L1_Current', color: '#10B981', type: 'line' },
     { name: 'Phase B Balance', valueField: 'Genset_L2_Current', color: '#F59E0B', type: 'line' },
     { name: 'Phase C Balance', valueField: 'Genset_L3_Current', color: '#EF4444', type: 'line' },
-    { name: 'Current Imbalance(%)', valueField: 'currentImbalance', color: '#8A2BE2', type: 'line', yAxis: 'right'  }
+    { name: 'Current Imbalance(%)', valueField: 'CurrentImbalance', color: '#8A2BE2', type: 'line', yAxis: 'right'  }
   ];
 
   const electroMechanicalStressConfig = [

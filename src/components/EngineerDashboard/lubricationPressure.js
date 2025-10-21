@@ -159,31 +159,26 @@ const LubricationPressure = ({ view = "live", startDate, endDate, isRange }) => 
     };
     
     if (view === "live") {
-      payload.interval = 'hour'; // Only for live
+      payload.interval = 'hour';
     }
     
     if (view === "historic") {
-      // Ensure dates are converted to full ISO datetime (start of day for start, end of day for end, in UTC)
       const formattedStart = startDate ? new Date(startDate + 'T00:00:00.000Z').toISOString() : null;
       const formattedEnd = endDate ? new Date(endDate + 'T23:59:59.999Z').toISOString() : null;
       
-      // Validate dates: end should not be before start
       if (formattedStart && formattedEnd && new Date(formattedEnd) < new Date(formattedStart)) {
-        payload.end = formattedStart; // Fallback to start if invalid
+        payload.end = formattedStart; 
       } else {
         if (formattedStart) payload.start = formattedStart;
         if (formattedEnd) payload.end = formattedEnd;
       }
       
-      // If isRange, you can add custom logic here if needed (e.g., other params), but no interval
     }
     
-    // Explicitly exclude any fromDate/toDate or interval for historic
     delete payload.fromDate;
     delete payload.toDate;
     if (view === "historic") delete payload.interval;
     
-    // Optional: console.log('Cleaned Payload:', payload); // For debugging
     return payload;
   };
 

@@ -131,7 +131,7 @@ const ThermalHealth = ({ view = "live", startDate, endDate, isRange }) => {
   ];
 
   const coolingMarginAdequacyConfig = [
-    { name: 'Cooling Margin', valueField: 'Cooling_Margin', color: '#06B6D4', type: 'line' },
+    { name: 'Cooling Margin', valueField: 'Cooling_MarginF', color: '#06B6D4', type: 'line' },
   ];
 
   const baseApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/thermal-health`;
