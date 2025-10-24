@@ -906,34 +906,34 @@ const raleway = Raleway({
 });
 
 const electricalStabilityConfig = [
-  { name: 'Voltage L1-L2', valueField: 'Genset_L1L2_Voltage', color: '#10B981', type: 'line' },
-  { name: 'Voltage L2-L3', valueField: 'Genset_L2L3_Voltage', color: '#F59E0B', type: 'line' },
-  { name: 'Voltage L3-L1', valueField: 'Genset_L3L1_Voltage', color: '#8A2BE2', type: 'line' },
-  { name: 'Genset Frequency', valueField: 'Genset_Frequency_OP_calculated', color: '#EF4444', type: 'line', yAxis: 'right' },
+  { name: 'Voltage L1-L2', valueField: 'Genset_L1L2_Voltage', color: '#D25250', type: 'line' },
+  { name: 'Voltage L2-L3', valueField: 'Genset_L2L3_Voltage', color: '#DFBB4E', type: 'line' },
+  { name: 'Voltage L3-L1', valueField: 'Genset_L3L1_Voltage', color: '#159089', type: 'line' },
+  { name: 'Genset Frequency', valueField: 'Genset_Frequency_OP_calculated', color: '#4169E1', type: 'line', yAxis: 'right' },
 ];
 
 const loadSharingConfig = [
-  { name: 'Phase A Load', valueField: 'Genset_L1_Current', color: '#10B981', type: 'line' },
-  { name: 'Phase B Load', valueField: 'Genset_L2_Current', color: '#F59E0B', type: 'line' },
-  { name: 'Phase C Load', valueField: 'Genset_L3_Current', color: '#EF4444', type: 'line' },
+  { name: 'Phase A Load', valueField: 'Genset_L1_Current', color: '#828933', type: 'line' },
+  { name: 'Phase B Load', valueField: 'Genset_L2_Current', color: '#E75956', type: 'line' },
+  { name: 'Phase C Load', valueField: 'Genset_L3_Current', color: '#20B2AA', type: 'line' },
 ];
 
 const currentBalanceConfig = [
-  { name: 'Current Imbalance(%)', valueField: 'currentImbalance', color: '#10B981', type: 'line' },
-  { name: 'Neutral Current', valueField: 'neutralCurrent', color: '#F59E0B', type: 'line', yAxis: 'right' },
+  { name: 'Current Imbalance(%)', valueField: 'CurrentImbalance', color: '#5A895C', type: 'line' },
+  { name: 'Neutral Current', valueField: 'neutralCurrent', color: '#CA49A7', type: 'line', yAxis: 'right' },
 ];
 
 const engineThermalConfig = [
-  { name: 'Coolant Temp', valueField: 'Coolant_Temperature', color: '#10B981', type: 'line' },
-  { name: 'Oil Temp', valueField: 'Oil_Temperature', color: '#F59E0B', type: 'line', yAxis: 'right' },
+  { name: 'Coolant Temp', valueField: 'Coolant_Temperature', color: '#E75956', type: 'line' },
+  { name: 'Oil Temp', valueField: 'Oil_Temperature', color: '#828933', type: 'line', yAxis: 'right' },
 ];
 
 const lubePressureConfig = [
-  { name: 'Oil Pressure', valueField: 'Oil_Pressure', color: '#10B981', type: 'line' },
+  { name: 'Oil Pressure', valueField: 'Oil_Pressure', color: '#4169E1', type: 'line' },
 ];
 
 const fuelDemandConfig = [
-  { name: 'Fuel Rate', valueField: 'Fuel_Rate', color: '#F59E0B', type: 'line' },
+  { name: 'Fuel Rate', valueField: 'Fuel_Rate', color: '#159089', type: 'line' },
 ];
 
 export default function OperatorDashboard() {

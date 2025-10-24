@@ -111,27 +111,27 @@ import GeneralOperator from "@/components/OperatorDashboard/GeneralOperator";
 
 const ThermalHealth = ({ view = "live", startDate, endDate, isRange }) => {
   const thermalPerformanceConfig = [
-    { name: 'Coolant Temperature', valueField: 'Coolant_Temperature', color: '#3B82F6', type: 'line' },
-    { name: 'Oil Temperature', valueField: 'Oil_Temperature', color: '#a14389', type: 'line', yAxis: 'right' },
+    { name: 'Coolant Temperature', valueField: 'Coolant_Temperature', color: '#A9D5AA', type: 'line' }, // 3B82F6
+    { name: 'Oil Temperature', valueField: 'Oil_Temperature', color: '#0475B0', type: 'line', yAxis: 'right' }, // a14389
   ];
 
   const combustionAirEffectivenessConfig = [
-    { name: 'Intake_Manifold_Temperature', valueField: 'Intake_Manifold3_Temperature', color: '#10B981', type: 'line' },
-    { name: 'Boost_Pressure', valueField: 'Boost_Pressure', color: '#F59E0B', type: 'line' },
+    { name: 'Intake_Manifold_Temperature', valueField: 'Intake_Manifold3_Temperature', color: '#E75956', type: 'line' }, // 10B981
+    { name: 'Boost_Pressure', valueField: 'Boost_Pressure', color: '#828933', type: 'line' }, // F59E0B
   ];
 
   const coolingSystemEfficiencyConfig = [
-    { name: 'Line to line Voltage', valueField: 'Genset_LL_Avg_Voltage', color: '#EF4444', type: 'line' },
-    { name: 'Voltage Imbalance (%)', valueField: 'voltageImbalance', color: '#10B981', type: 'line', yAxis: 'right' },
+    { name: 'Line to line Voltage', valueField: 'Genset_LL_Avg_Voltage', color: '#20B2AA', type: 'line' }, // EF4444
+    { name: 'Voltage Imbalance (%)', valueField: 'voltageImbalance', color: '#E75956', type: 'line', yAxis: 'right' }, // 10B981
   ];
 
   const thermalStressAlertConfig = [
-    { name: 'Load (%)', valueField: 'LoadPercent', color: '#8B5CF6', type: 'line' },
-    { name: 'Power Factor', valueField: 'Genset_Total_Power_Factor_calculated', color: '#EF4444', type: 'line', yAxis: 'right' },
+    { name: 'Thermal Stress', valueField: 'thermalStressC', color: '#5A895C', type: 'line' }, // 8B5CF6
+    { name: 'Oil Temperature_Safety Ratio', valueField: 'OTSRC', color: '#CA49A7', type: 'line', yAxis: 'right' }, // EF4444
   ];
 
   const coolingMarginAdequacyConfig = [
-    { name: 'Cooling Margin', valueField: 'Cooling_MarginF', color: '#06B6D4', type: 'line' },
+    { name: 'Cooling Margin', valueField: 'Cooling_MarginF', color: '#DFBB4E', type: 'line' }, // 06B6D4
   ];
 
   const baseApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/thermal-health`;

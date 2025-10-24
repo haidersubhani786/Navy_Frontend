@@ -122,32 +122,32 @@ import GeneralOperator from "@/components/OperatorDashboard/GeneralOperator";
 
 const LubricationPressure = ({ view = "live", startDate, endDate, isRange }) => {
   const lubricationHealthConfig = [
-    { name: 'Oil Pressure', valueField: 'Oil_Pressure', color: '#8B5CF6', type: 'line' },
-    { name: 'Oil Temperature', valueField: 'Oil_Temperature', color: '#3B82F6', type: 'line', yAxis: 'right' },
+    { name: 'Oil Pressure', valueField: 'Oil_Pressure', color: '#5A895C', type: 'line' }, // 8B5CF6
+    { name: 'Oil Temperature', valueField: 'Oil_Temperature', color: '#CA49A7', type: 'line', yAxis: 'right' }, // 3B82F6
   ];
 
   const electricalStabilityConfig = [
-    { name: 'Lubrication Risk Index', valueField: 'Lubrication_Risk_Index', color: '#10B981', type: 'line' },
+    { name: 'Lubrication Risk Index', valueField: 'Lubrication_Risk_Index', color: '#159089', type: 'line' }, // 10B981
   ];
 
   const lubPressureResponseConfig = [
-    { name: 'Oil Pressure', valueField: 'Oil_Pressure', color: '#F59E0B', type: 'line' },
-    { name: 'Engine Speed', valueField: 'Averagr_Engine_Speed', color: '#10B981', type: 'line' },
+    { name: 'Oil Pressure', valueField: 'Oil_Pressure', color: '#A9D5AA', type: 'line' }, // F59E0B
+    { name: 'Engine Speed', valueField: 'Averagr_Engine_Speed', color: '#0475B0', type: 'line' }, // 10B981
   ];
 
   const airFuelProfileConfig = [
-    { name: 'Boost Pressure', valueField: 'Boost_Pressure', color: '#3B82F6', type: 'line' },
-    { name: 'Fuel Outlet Pressure', valueField: 'Fuel_Outlet_Pressure_calculated', color: '#10B981', type: 'line' },
+    { name: 'Boost Pressure', valueField: 'Boost_Pressure', color: '#20B2AA', type: 'line' }, // 3B82F6
+    { name: 'Fuel Outlet Pressure', valueField: 'Fuel_Outlet_Pressure_calculated', color: '#E75956', type: 'line' }, // 10B981
   ];
 
   const turboEffectivenessConfig = [
-    { name: 'Boost Pressure', valueField: 'Boost_Pressure', color: '#10B981', type: 'line' },
-    { name: 'Load (%)', valueField: 'LoadPercent', color: '#8B5CF6', type: 'line', yAxis: 'right' },
+    { name: 'Boost Pressure', valueField: 'Boost_Pressure', color: '#E75956', type: 'line' }, // 10B981
+    { name: 'Load (%)', valueField: 'LoadPercent', color: '#828933', type: 'line', yAxis: 'right' }, // 8B5CF6
   ];
 
   const fuelAmbientPressureConfig = [
-    { name: 'Fuel Outlet Pressure', valueField: 'Fuel_Outlet_Pressure_calculated', color: '#EF4444', type: 'line' },
-    { name: 'Ambient Pressure', valueField: 'Barometric_Absolute_Pressure', color: '#3B82F6', type: 'line', yAxis: 'right' },
+    { name: 'Fuel Outlet Pressure', valueField: 'Fuel_Outlet_Pressure_calculated', color: '#20B2AA', type: 'line' }, // EF4444
+    { name: 'Ambient Pressure', valueField: 'Barometric_Absolute_Pressure', color: '#FF8380', type: 'line', yAxis: 'right' }, // 3B82F6
   ];
 
   const baseApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/lubrication`;

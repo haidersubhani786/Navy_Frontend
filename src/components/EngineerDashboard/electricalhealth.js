@@ -7,36 +7,36 @@ import GeneralOperator from "@/components/OperatorDashboard/GeneralOperator";
 // New Commit
 const ElectricalHealth = ({ view = "live", startDate, endDate, isRange }) => {
   const phaseBalanceConfig = [
-    { name: 'Phase A Balance', valueField: 'Genset_L1_Current', color: '#10B981', type: 'line' },
-    { name: 'Phase B Balance', valueField: 'Genset_L2_Current', color: '#F59E0B', type: 'line' },
-    { name: 'Phase C Balance', valueField: 'Genset_L3_Current', color: '#EF4444', type: 'line' },
-    { name: 'Current Imbalance(%)', valueField: 'CurrentImbalance', color: '#8A2BE2', type: 'line', yAxis: 'right'  }
+    { name: 'Phase A Balance', valueField: 'Genset_L1_Current', color: '#D25250', type: 'line' },
+    { name: 'Phase B Balance', valueField: 'Genset_L2_Current', color: '#DFBB4E', type: 'line' },
+    { name: 'Phase C Balance', valueField: 'Genset_L3_Current', color: '#159089', type: 'line' },
+    { name: 'Current Imbalance(%)', valueField: 'CurrentImbalance', color: '#4169E1', type: 'line', yAxis: 'right'  }
   ];
 
   const electroMechanicalStressConfig = [
-    { name: 'Electric Stress and Load Stress', valueField: 'stressIndex', color: '#10B981', type: 'line' },
+    { name: 'Electric Stress and Load Stress', valueField: 'LoadStress', color: '#20B2AA', type: 'line' },
   ];
 
   const voltageQualityConfig = [
-    { name: 'Phase A', valueField: 'Genset_L1L2_Voltage', color: '#F59E0B', type: 'line' },
-    { name: 'Phase B', valueField: 'Genset_L2L3_Voltage', color: '#10B981', type: 'line' },
-    { name: 'Phase C', valueField: 'Genset_L3L1_Voltage', color: '#3B82F6', type: 'line' },
-    { name: 'Voltage Imbalance (%)', valueField: 'voltageImbalance', color: '#8B5CF6', type: 'line', yAxis: 'right' },
+    { name: 'Phase A', valueField: 'Genset_L1L2_Voltage', color: '#D25250', type: 'line' }, // #F59E0B
+    { name: 'Phase B', valueField: 'Genset_L2L3_Voltage', color: '#DFBB4E', type: 'line' }, // #10B981
+    { name: 'Phase C', valueField: 'Genset_L3L1_Voltage', color: '#159089', type: 'line' }, // #3B82F6
+    { name: 'Voltage Imbalance (%)', valueField: 'voltageImbalance', color: '#4169E1', type: 'line', yAxis: 'right' }, // #8B5CF6
   ];
 
   const loadPowerFactorConfig = [
-    { name: 'Load %', valueField: 'LoadPercent', color: '#10B981', type: 'line' },
-    { name: 'Power Factor', valueField: 'Genset_Total_Power_Factor_calculated', color: '#3B82F6', type: 'line', yAxis: 'right' },
+    { name: 'Load %', valueField: 'LoadPercent', color: '#20B2AA', type: 'line' }, // 10B981
+    { name: 'Power Factor', valueField: 'Genset_Total_Power_Factor_calculated', color: '#E75956', type: 'line', yAxis: 'right' }, // 3B82F6
   ];
 
   const lossesThermalStressConfig = [
-    { name: 'Power Loss Index', valueField: 'PowerLossFactor', color: '#10B981', type: 'line' },
-    { name: '12R Heating', valueField: 'I2', color: '#EF4444', type: 'line', yAxis: 'right' },
+    { name: 'Power Loss Index', valueField: 'PowerLossFactor', color: '#5A895C', type: 'line' }, // 10B981
+    { name: '12R Heating', valueField: 'I2', color: '#CA49A7', type: 'line', yAxis: 'right' }, // EF4444
   ];
 
   const frequencyRegulationConfig = [
-    { name: 'Genset Frequency', valueField: 'Genset_Frequency_OP_calculated', color: '#10B981', type: 'line' },
-    { name: 'Grid Deviation', valueField: 'grDeviation', color: '#3B82F6', type: 'line', yAxis: 'right' },
+    { name: 'Genset Frequency', valueField: 'Genset_Frequency_OP_calculated', color: '#A9D5AA', type: 'line' }, // 10B981
+    { name: 'Grid Deviation', valueField: 'grDeviation', color: '#0475B0', type: 'line', yAxis: 'right' }, // 3B82F6
   ];
 
  const baseApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/electrical-health`;

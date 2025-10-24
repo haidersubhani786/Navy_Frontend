@@ -107,28 +107,28 @@ import GeneralOperator from "@/components/OperatorDashboard/GeneralOperator";
 
 const PerformanceLoad = ({ view = "live", startDate, endDate, isRange }) => {
   const efficiencyUnderLoadConfig = [
-    { name: 'Load (%)', valueField: 'load', color: '#3B82F6', type: 'line' },
-    { name: 'Generator Efficiency', valueField: 'generatorEfficiency', color: '#A855F7', type: 'line' },
+    { name: 'Load (%)', valueField: 'load_Percent', color: '#5A895C', type: 'line' }, // 3B82F6
+    { name: 'Generator Efficiency', valueField: 'generatorEfficiency', color: '#CA49A7', type: 'line' }, // A855F7
   ];
 
   const torqueResponseLoadConfig = [
-    { name: 'Load %', valueField: 'loadPercent', color: '#10B981', type: 'line' },
-    { name: 'Percent Engine Torque', valueField: 'percentEngineTorque', color: '#F59E0B', type: 'line' },
+    { name: 'Load %', valueField: 'loadPercent', color: '#A9D5AA', type: 'line' }, // 10B981
+    { name: 'Percent Engine Torque', valueField: 'Percent_Engine_Torque_or_Duty_Cycle', color: '#0475B0', type: 'line' }, // F59E0B
   ];
 
   const loadImpactSpeedConfig = [
-    { name: 'Load %', valueField: 'loadPercent', color: '#EF4444', type: 'line' },
-    { name: 'RPM Deviation', valueField: 'rpmDeviation', color: '#F59E0B', type: 'line' },
+    { name: 'Load %', valueField: 'Load_Percent', color: '#E75956', type: 'line' }, // EF4444
+    { name: 'RPM Deviation', valueField: 'RPM_Stability_Index', color: '#828933', type: 'line', yAxis: 'right' }, // F59E0B
   ];
 
   const oscillationBehaviorConfig = [
-    { name: 'Load %', valueField: 'loadPercent', color: '#10B981', type: 'line' },
-    { name: 'Oscillation Index', valueField: 'oscillationIndex', color: '#3B82F6', type: 'line' },
+    { name: 'Load %', valueField: 'Load_Percent', color: '#20B2AA', type: 'line' }, // 10B981
+    { name: 'Oscillation Index', valueField: 'Oscillation_Index', color: '#E75956', type: 'line', yAxis: 'right' }, // 3B82F6
   ];
 
   const fuelDemandLoadConfig = [
-    { name: 'Load %', valueField: 'loadPercent', color: '#10B981', type: 'line' },
-    { name: 'Fuel Consumed', valueField: 'fuelConsumed', color: '#A855F7', type: 'line' },
+    { name: 'Load %', valueField: 'Load_Percent', color: '#A9D5AA', type: 'line' }, // 10B981
+    { name: 'Fuel Consumed', valueField: 'Fuel_Cumulative', color: '#0475B0', type: 'line', yAxis: 'right' }, // A855F7
   ];
 
   const baseApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/performance-load`;

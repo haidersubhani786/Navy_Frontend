@@ -4,31 +4,31 @@ import GeneralOperator from "@/components/OperatorDashboard/GeneralOperator";
 
 const FuelCombustion = ({ view = "live", startDate, endDate, isRange }) => {
   const fuelConsumptionLoadConfig = [
-    { name: 'Fuel Rate', valueField: 'Fuel_Rate', color: '#3B82F6', type: 'line' },
-    { name: 'Load (%)', valueField: 'LoadPercent', color: '#A855F7', type: 'line', yAxis: 'right' },
+    { name: 'Fuel Rate', valueField: 'Fuel_Rate', color: '#5A895C', type: 'line' }, // 3B82F6
+    { name: 'Load (%)', valueField: 'LoadPercent', color: '#CA49A7', type: 'line', yAxis: 'right' }, // A855F7
   ];
 
   const fuelUtilizationThermalConfig = [
-    { name: 'Fuel Flow Rate(L/h)/Power Output(KW)', valueField: 'fuelUtilization', color: '#10B981', type: 'line' },
-    { name: 'Thermal Efficiency', valueField: 'thermalEfficiency', color: '#F59E0B', type: 'line' },
+    { name: 'Fuel Flow Rate(L/h)/Power Output(KW)', valueField: 'fuelUtilization', color: '#A9D5AA', type: 'line' }, // 10B981
+    { name: 'Thermal Efficiency', valueField: 'thermalEfficiency', color: '#0475B0', type: 'line' }, // F59E0B
   ];
 
   const fuelGeneratorEfficiencyConfig = [
-    { name: 'Fuel Efficiency', valueField: 'SpecificFuelConsumption', color: '#EF4444', type: 'line' },
-    { name: 'Genset Efficiency', valueField: 'generatorEfficiency', color: '#22C55E', type: 'line' },
+    { name: 'Fuel Efficiency', valueField: 'SpecificFuelConsumption', color: '#E75956', type: 'line' }, // EF4444
+    { name: 'Genset Efficiency', valueField: 'generatorEfficiency', color: '#828933', type: 'line' }, // 22C55E
   ];
 
   const combustionMixtureConfig = [
-    { name: 'Heat Rate', valueField: 'HeatRate', color: '#10B981', type: 'line' },
+    { name: 'Heat Rate', valueField: 'HeatRate', color: '#20B2AA', type: 'line' }, // 10B981
   ];
 
   const fuelFlowVariabilityConfig = [
-    { name: 'Fuel Flow Rate Change', valueField: 'FuelFlowRateChange', color: '#22C55E', type: 'line' },
+    { name: 'Fuel Flow Rate Change', valueField: 'FuelFlowRateChange', color: '#20B2AA', type: 'line' }, // 22C55E
   ];
 
   const injectionSystemHealthConfig = [
-    { name: 'Fuel Rate', valueField: 'Fuel_Rate', color: '#3B82F6', type: 'line' },
-    { name: 'Fuel Outlet Pressure', valueField: 'Fuel_Outlet_Pressure', color: '#A855F7', type: 'line', yAxis: 'right' },
+    { name: 'Fuel Rate', valueField: 'Fuel_Rate', color: '#E75956', type: 'line' }, // 3B82F6
+    { name: 'Fuel Outlet Pressure', valueField: 'Fuel_Outlet_Pressure', color: '#828933', type: 'line', yAxis: 'right' }, // A855F7
   ];
 
 const baseApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/fuel-combustion`;

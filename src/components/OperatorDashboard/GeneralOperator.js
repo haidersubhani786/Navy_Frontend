@@ -151,7 +151,6 @@ const GeneralOperator = ({
         raw = []; // Fallback
       }
 
-      // Format for AmCharts: { time: string, ...fields }
       const formatted = raw.map((item) => ({
         time: item.timestamp || item.label || item.date || new Date(item.time || Date.now()).toISOString().split('T')[0], // Adjust key as per API
         ...item
@@ -166,11 +165,10 @@ const GeneralOperator = ({
     }
   };
 
-  // Fetch useEffect: Runs on extraPayload or queryParams change
   useEffect(() => {
     if (!apiUrl) return;
     fetchData();
-  }, [extraPayload, queryParams, resolution, apiUrl]); // Removed local dateRange deps since using external payload
+  }, [extraPayload, queryParams, resolution, apiUrl]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -292,24 +290,20 @@ const GeneralOperator = ({
         series.yAxis = chart.yAxes.values[0];
       }
       if (seriesItem.type === "line") {
-        series.strokeWidth = 2; // Slightly thicker for visibility in dashboard
+        series.strokeWidth = 1; 
         series.strokeDasharray = "0";
       } else {
         if (stackBars) series.stacked = true;
         series.columns.template.width = am4core.percent(70);
       }
 
-      // Add 'M' markers if enabled (e.g., for specific points like max/min)
       if (showMarkers && seriesItem.markerPoints) {
-        // Assuming markerPoints is an array of data indices or conditions
-        // For simplicity, add a sample bullet; customize based on data
         const bullet = series.bullets.push(new am4charts.CircleBullet());
         bullet.circle.radius = 6;
-        bullet.circle.fill = am4core.color("#00FF00"); // Green 'M' marker
+        bullet.circle.fill = am4core.color("#00FF00");
         bullet.label.text = "M";
         bullet.label.fill = am4core.color("#fff");
         bullet.label.fontSize = 10;
-        // In real use, use data validator to show only on specific points
       }
     });
 
@@ -433,7 +427,7 @@ const GeneralOperator = ({
             value = parseFloat(stat.avg);
             if (isNaN(value)) return;
             labelText = `${seriesItem.name} Avg`;
-            lineColor = "#efa2ec"; // blue
+            lineColor = "#efa2ec"; 
           } else {
             return;
           }

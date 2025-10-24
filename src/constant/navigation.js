@@ -51,7 +51,7 @@ export const privilegeConfig = {
     tab: "AI",
   },
   Reports: {
-    href: "/cooling_tower_report?type=Process&meterId=CT1",
+    href: "/reports",
     // icon: faFileAlt,
     label: "Reports",
     tab: "Reports",
